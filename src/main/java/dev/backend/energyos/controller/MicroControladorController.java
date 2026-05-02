@@ -4,6 +4,7 @@ import dev.backend.energyos.dto.MedicaoRequest;
 import dev.backend.energyos.service.MicroControladorService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -29,5 +30,9 @@ public class MicroControladorController {
                 request.getEnergia(),
                 request.getFrequencia()
         );
+    }
+    @GetMapping("/{id}/medicoes")
+    public List<String> buscarMedicoes(@PathVariable UUID id) {
+        return service.buscarMedicoes(id);
     }
 }

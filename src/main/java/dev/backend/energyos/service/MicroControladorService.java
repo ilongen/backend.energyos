@@ -3,6 +3,8 @@ package dev.backend.energyos.service;
 import com.influxdb.v3.client.InfluxDBClient;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
 
@@ -29,5 +31,20 @@ public class MicroControladorService {
         );
 
         influxDBClient.writeRecord(line);
+    }
+    public List<String> buscarMedicoes(UUID microControlID) {
+
+        String query = String.format(
+                "SELECT * FROM microcontrolador_data WHERE microControlID = '%s'",
+                microControlID
+        );
+
+        var result = influxDBClient.query(query);
+
+        List<String> data = new ArrayList<>();
+
+        result.forEach(row -> data.add(row.toString()));
+
+        return data;
     }
 }
