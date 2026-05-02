@@ -5,10 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UsuarioRequest {
-    private String nome;
+public class AuthUsuarioRequest {
     private String email;
     private String senha;
-    private String numeroCasa;
-    private String cep;
 }

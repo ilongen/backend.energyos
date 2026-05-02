@@ -20,9 +20,8 @@ public class MicroControlador {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-    @OneToOne
-    @JoinColumn(name="modulo_leitor_id")
-    private ModuloLeitor moduloLeitor;
+    private String nomeModulo;
+    private LocalDateTime dataUltimaTrocaModulo;
 
     private LocalDateTime dataSaidaManutencao;
 
