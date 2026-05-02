@@ -4,6 +4,7 @@ import com.influxdb.v3.client.InfluxDBClient;
 import org.springframework.stereotype.Service;
 
 import java.util.Locale;
+import java.util.UUID;
 
 @Service
 public class MicroControladorService {
@@ -15,7 +16,7 @@ public class MicroControladorService {
     }
 
     // errar uma virgula irá quebrar a query de insert no banco, cuidado!
-    public void salvarMedicao(Long microControlID,
+    public void salvarMedicao(UUID microControlID,
                               double tensao,
                               double corrente,
                               double potencia,
@@ -23,7 +24,7 @@ public class MicroControladorService {
                               double frequencia) {
 
         String line = String.format(Locale.US,
-                "microcontrolador_data,microControlID=%d tensao=%f,corrente=%f,potencia=%f,energia=%f,frequencia=%f",
+                "microcontrolador_data,microControlID=%s tensao=%f,corrente=%f,potencia=%f,energia=%f,frequencia=%f",
                 microControlID, tensao, corrente, potencia, energia, frequencia
         );
 

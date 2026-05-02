@@ -4,6 +4,8 @@ import dev.backend.energyos.dto.MedicaoRequest;
 import dev.backend.energyos.service.MicroControladorService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/microcontroladores")
 public class MicroControladorController {
@@ -16,7 +18,7 @@ public class MicroControladorController {
 
     @PostMapping("/{id}/medicao")
     public void salvarMedicao(
-            @PathVariable Long id,
+            @PathVariable UUID id,
             @RequestBody MedicaoRequest request
     ) {
         service.salvarMedicao(

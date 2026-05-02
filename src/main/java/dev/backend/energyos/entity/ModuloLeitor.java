@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Table(name="moduloLeitor")
+@Table(name="modulo_leitor")
 @Entity
 @Getter
 @Setter
@@ -16,8 +16,7 @@ public class ModuloLeitor {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID idModuloLeitor;
 
-    @OneToOne
-    @JoinColumn(name = "microControlador")
+    @OneToOne(mappedBy = "moduloLeitor")
     private MicroControlador microControlador;
 
     private String nome;

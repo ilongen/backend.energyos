@@ -3,6 +3,8 @@ package dev.backend.energyos.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 import java.util.UUID;
 
 @Table(name="usuario")
@@ -21,7 +23,6 @@ public class Usuario {
 
     private String cep;
 
-    @OneToMany
-    @JoinColumn(name = "microControlador")
-    private MicroControlador fkMicroControlador;
+    @OneToMany(mappedBy = "usuario")
+    private List<MicroControlador> microControladores;
 }

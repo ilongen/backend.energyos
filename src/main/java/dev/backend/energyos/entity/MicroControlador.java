@@ -10,18 +10,18 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-@Table(name = "microControlador")
+@Table(name = "micro_controlador")
 public class MicroControlador {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Id
     private UUID idEsp32;
 
     @ManyToOne
-    @JoinColumn(name = "usuario")
-    private Usuario usuarioPertence;
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
     @OneToOne
-    @JoinColumn(name="moduloLeitor")
+    @JoinColumn(name="modulo_leitor_id")
     private ModuloLeitor moduloLeitor;
 
     private LocalDateTime dataSaidaManutencao;
