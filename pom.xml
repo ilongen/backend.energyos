@@ -38,13 +38,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>4.0.4</version>
 		</dependency>
 
 		<!-- INFLUX -->
 		<dependency>
 			<groupId>com.influxdb</groupId>
 			<artifactId>influxdb3-java</artifactId>
-			<version>1.0.0</version>
+			<version>1.9.0</version>
 		</dependency>
 
 		<!-- MICROMETER INFLUX -->
