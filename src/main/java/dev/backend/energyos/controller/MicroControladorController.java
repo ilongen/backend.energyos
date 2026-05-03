@@ -1,6 +1,7 @@
 package dev.backend.energyos.controller;
 
 import dev.backend.energyos.dto.MedicaoRequest;
+import dev.backend.energyos.dto.MedicaoResponse;
 import dev.backend.energyos.service.MicroControladorService;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,7 +33,7 @@ public class MicroControladorController {
         );
     }
     @GetMapping("/{id}/medicoes")
-    public List<String> buscarMedicoes(@PathVariable UUID id) {
+    public List<MedicaoResponse> buscarMedicoes(@PathVariable UUID id) {
         return service.buscarMedicoes(id);
     }
 }

@@ -1,6 +1,7 @@
 package dev.backend.energyos.service;
 
 import com.influxdb.v3.client.InfluxDBClient;
+import dev.backend.energyos.dto.MedicaoResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -32,18 +33,31 @@ public class MicroControladorService {
 
         influxDBClient.writeRecord(line);
     }
-    public List<String> buscarMedicoes(UUID microControlID) {
+    public List<MedicaoResponse> buscarMedicoes(UUID microControlID) {
 
         String query = String.format(
-                "SELECT * FROM microcontrolador_data WHERE microControlID = '%s'",
+                "SELECT time, tensao, corrente, potencia, energia, frequencia " +
+                        "FROM microcontrolador_data " +
+                        "WHERE \"microControlID\" = '%s'",
                 microControlID
         );
 
         var result = influxDBClient.query(query);
 
-        List<String> data = new ArrayList<>();
+        List<MedicaoResponse> data = new ArrayList<>();
 
-        result.forEach(row -> data.add(row.toString()));
+        result.forEach(rowObj -> {
+
+            MedicaoResponse dto = new MedicaoResponse();
+            dto.time = ((Object[]) rowObj)[0].toString();
+            dto.tensao = ((Number) ((Object[]) rowObj)[1]).doubleValue();
+            dto.corrente = ((Number) ((Object[]) rowObj)[2]).doubleValue();
+            dto.potencia = ((Number) ((Object[]) rowObj)[3]).doubleValue();
+            dto.energia = ((Number) ((Object[]) rowObj)[4]).doubleValue();
+            dto.frequencia = ((Number) ((Object[]) rowObj)[5]).doubleValue();
+
+            data.add(dto);
+        });
 
         return data;
     }
