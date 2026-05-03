@@ -8,9 +8,9 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
+@Table(name = "micro_controlador")
 @Getter
 @Setter
-@Table(name = "micro_controlador")
 public class MicroControlador {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Id
