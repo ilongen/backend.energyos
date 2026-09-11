@@ -1,109 +1,84 @@
-EnergyOS Backend
+# EnergyOS Backend
 
-Backend desenvolvido como parte de um projeto acadêmico, com foco no estudo, modelagem e desenvolvimento de uma solução voltada ao gerenciamento de dados e serviços relacionados à energia.
+> Backend desenvolvido como projeto acadêmico para estudo e demonstração de conceitos relacionados ao desenvolvimento de APIs e sistemas de gerenciamento de energia.
 
-📌 Status do Projeto
+![Status](https://img.shields.io/badge/status-finalizado-success)
+![Projeto](https://img.shields.io/badge/tipo-acadêmico-blue)
+![Java](https://img.shields.io/badge/Java-Backend-orange)
+![Maven](https://img.shields.io/badge/Maven-build-red)
 
-Finalizado — Projeto Acadêmico
+## 📌 Status do Projeto
 
-Este projeto foi desenvolvido exclusivamente para fins acadêmicos e educacionais, tendo como objetivo aplicar e demonstrar conceitos de desenvolvimento de software, arquitetura backend, APIs REST e organização de sistemas.
+**Finalizado — Projeto Acadêmico**
 
-⚠️ Importante: este projeto não representa uma aplicação completa pronta para produção. Algumas funcionalidades foram propostas, modeladas ou documentadas para fins acadêmicos, mas não foram efetivamente implementadas.
+Este repositório representa a conclusão do desenvolvimento proposto para fins acadêmicos.
 
-🎯 Objetivo
+O projeto foi desenvolvido com foco em estudo, documentação, modelagem e aplicação de conceitos de desenvolvimento de software e APIs. Apesar de possuir uma estrutura de backend e código-fonte, **não se trata de um produto final destinado à utilização em ambiente de produção**.
 
-O objetivo do EnergyOS Backend é servir como base para o estudo e aplicação prática de conceitos relacionados ao desenvolvimento de sistemas backend.
+> ⚠️ **Importante:** este projeto não foi implementado, homologado ou disponibilizado como uma solução comercial ou sistema de produção. Seu principal objetivo é acadêmico e educacional.
 
-Entre os principais conceitos abordados estão:
+---
 
-Desenvolvimento de APIs REST;
-Arquitetura de aplicações backend;
-Modelagem de serviços;
-Desenvolvimento com Java;
-Gerenciamento de dependências com Maven;
-Organização e estruturação de projetos;
-Documentação de APIs;
-Boas práticas de engenharia de software.
-🛠️ Tecnologias
-Java
-Spring Boot
-Maven
-REST API
-Git
-GitHub
-📂 Estrutura do Projeto
+## 📖 Sobre o Projeto
+
+O **EnergyOS Backend** consiste em uma proposta de backend relacionada ao gerenciamento e disponibilização de informações de um sistema voltado ao contexto energético.
+
+O projeto foi desenvolvido para explorar conceitos como:
+
+- Desenvolvimento de aplicações backend;
+- Criação e organização de APIs;
+- Estruturação de projetos Java;
+- Arquitetura de software;
+- Modelagem de funcionalidades;
+- Organização de código;
+- Documentação de APIs;
+- Gerenciamento de dependências;
+- Utilização do Maven para build e gerenciamento do projeto.
+
+A implementação presente neste repositório deve ser entendida como parte de um contexto acadêmico, servindo como material de estudo e demonstração técnica.
+
+---
+
+## 🎯 Objetivos
+
+O projeto teve como principais objetivos:
+
+- Desenvolver uma estrutura de backend utilizando Java;
+- Aplicar conceitos aprendidos durante o desenvolvimento acadêmico;
+- Estruturar uma API relacionada ao domínio de energia;
+- Praticar organização e manutenção de código;
+- Trabalhar com gerenciamento de dependências utilizando Maven;
+- Documentar as funcionalidades e interfaces propostas;
+- Consolidar conhecimentos de desenvolvimento de software backend.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+As principais tecnologias e ferramentas utilizadas no projeto incluem:
+
+- **Java**
+- **Maven**
+- **Spring Boot**
+- **Git**
+- **GitHub**
+
+> As tecnologias e versões específicas podem ser consultadas no arquivo `pom.xml`.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
 backend.energyos/
 ├── .mvn/
 │   └── wrapper/
 ├── src/
 │   └── ...
-├── EnergyOS_API_Reference.pdf
 ├── .gitattributes
 ├── .gitignore
+├── EnergyOS_API_Reference.pdf
 ├── mvnw
 ├── mvnw.cmd
-└── pom.xml
-
-📚 Documentação
-
-O projeto possui um documento de referência da API:
-
-EnergyOS_API_Reference.pdf
-
-O documento apresenta a proposta e a referência das APIs relacionadas ao projeto.
-
-🚧 Limitações
-
-Por se tratar de um projeto acadêmico, algumas limitações devem ser consideradas:
-
-Nem todas as funcionalidades propostas foram implementadas;
-Algumas funcionalidades existem apenas como especificação ou documentação;
-O projeto não foi desenvolvido com o objetivo de atender um ambiente de produção;
-Não há garantia de escalabilidade, disponibilidade ou segurança para utilização em sistemas reais;
-Algumas integrações e comportamentos foram definidos apenas conceitualmente.
-🎓 Contexto Acadêmico
-
-O EnergyOS Backend foi desenvolvido como parte de um trabalho de caráter acadêmico.
-
-O principal objetivo foi aplicar conhecimentos de engenharia de software e desenvolvimento backend em um cenário relacionado ao gerenciamento de informações e serviços de energia.
-
-Dessa forma, o projeto deve ser interpretado como um estudo acadêmico e uma demonstração técnica, e não como um produto comercial ou uma plataforma pronta para produção.
-
-▶️ Executando o Projeto
-
-Para executar o projeto localmente, é possível utilizar o Maven Wrapper disponibilizado no repositório.
-
-Linux / macOS
-./mvnw spring-boot:run
-
-Windows
-mvnw.cmd spring-boot:run
-
-
-Para realizar o build:
-
-./mvnw clean package
-
-
-No Windows:
-
-mvnw.cmd clean package
-
-
-A execução do projeto pode depender das funcionalidades atualmente implementadas e das configurações do ambiente local.
-
-📌 Conclusão
-
-O projeto encontra-se finalizado dentro de seu escopo acadêmico.
-
-Seu desenvolvimento teve como foco o estudo, a aplicação de conceitos técnicos e a documentação de uma possível solução backend para o contexto do EnergyOS.
-
-O projeto não deve ser considerado uma implementação completa ou um sistema pronto para utilização em ambiente de produção.
-
-🎓 Projeto Acadêmico
-
-EnergyOS Backend
-
-Status: Finalizado
-Finalidade: Acadêmica e educacional
-Ambiente de produção: Não destinado a produção
+├── pom.xml
+└── README.md
